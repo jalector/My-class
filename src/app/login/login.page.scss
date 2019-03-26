@@ -1,0 +1,59 @@
+
+.login-img{
+    background: url(../../assets/login_page.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 1;
+}
+
+ion-content{
+
+    .trans-container{
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        position: relative;
+        width: 95%;
+        margin: 1em auto;
+        color: white;
+        padding: 10px;
+        z-index: 2;
+
+        h1.biggest-text{
+            font-size: 3em; 
+        }
+
+        p{
+            margin: 0px;
+            &.app-name {
+                margin-top: 2em;
+                font-size: 2em;
+            }
+        }
+
+        div.form-login{
+            margin-top: 3.5em;
+
+            input{
+                background:  rgba(0, 0, 0, 0.4);
+                border: 1px solid white;
+                border-radius: 5px;
+                margin: auto;
+                padding: 5px 3px 4px 5px;
+                margin: 5px;
+                width: 90%;
+                color:black;
+            }
+
+            div.buttons{
+                margin-bottom: 6em; 
+                button {
+                    margin: 5px 10px;
+                    border-radius: 3px;
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+}

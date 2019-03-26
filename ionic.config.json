@@ -1,5 +1,7 @@
 {
   "name": "my-class",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

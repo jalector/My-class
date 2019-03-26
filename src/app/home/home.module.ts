@@ -14,7 +14,15 @@ import { HomePage } from './home.page';
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        redirectTo: 'menu/announcements'
+      },
+      {
+        path: 'menu',
+        component: HomePage,
+        children: [
+          {path: 'announcements', loadChildren: '../pages/announcement/announcement.module#AnnouncementPageModule'},
+          {path: 'groups', loadChildren: '../pages/groups/groups.module#GroupsPageModule'}
+        ]
       }
     ])
   ],
