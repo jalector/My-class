@@ -10,8 +10,8 @@ import { Router, RouterEvent } from '@angular/router';
 export class HomePage {
   public selectedPath: string; 
   public pages = [
-    {title: 'Announcements', url: 'menu/announcements'},
-    {title: 'groups', url: 'menu/groups'}
+    {title: 'Announcements', url: '/home/announcements'},
+    {title: 'Groups', url: '/home/groups'}
   ]
 
   constructor(
