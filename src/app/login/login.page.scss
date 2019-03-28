@@ -19,7 +19,7 @@ ion-content{
         color: white;
         padding: 10px;
         z-index: 2;
-
+        height:  95%;
         h1.biggest-text{
             font-size: 3em; 
         }
@@ -33,27 +33,34 @@ ion-content{
         }
 
         div.form-login{
-            margin-top: 3.5em;
-
+            margin: 3.5em 1em;
+            
             input{
-                background:  rgba(0, 0, 0, 0.4);
-                border: 1px solid white;
-                border-radius: 5px;
-                margin: auto;
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 3px;
+                margin-top: 2em;
                 padding: 5px 3px 4px 5px;
-                margin: 5px;
                 width: 90%;
-                color:black;
+                border: 0px;
+                border-bottom: 2px solid white;
+                outline: none;
+
             }
 
             div.buttons{
+                margin-top: 1em;
                 margin-bottom: 6em; 
                 button {
-                    margin: 5px 10px;
+                    margin-right: 10px;
                     border-radius: 3px;
                     padding: 5px 15px;
                 }
             }
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
         }
     }
 }

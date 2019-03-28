@@ -2,20 +2,20 @@
 <div class="login-img"></div>
 <ion-content>
   <div class="trans-container">
-    <h1 class="biggest-text">Instituto tecnológico <br> de León</h1>
+    <h1 class="biggest-text">Instituto Tecnológico <br> de León</h1>
     <p class="app-name">My Class</p>
     <p>Organiza tus tiempo</p>
 
-    <div class="form-login" text-center>
-      <input type="text" placeholder="Correo">
-      <input type="password" placeholder="Contraseña">
+    <div class="form-login">
+      <input type="text" [(ngModel)]="user.email" placeholder="Correo">
+      <input type="password" [(ngModel)]="user.password" placeholder="Contraseña">
       <div class="buttons">
         <div class="button">
-          <button>Iniciar sesión</button>
-          <button>Registrarse</button>
+          <ion-button (click)="login()">Iniciar sesión</ion-button>
+          <ion-button>Registrarse</ion-button>
         </div>
       </div>
     </div>
-    <h6 text-center><small> Instituto tecnológico de León </small></h6>
+    <h6 class="footer" text-center><small> Instituto Tecnológico de León </small></h6>
   </div>
 </ion-content>
