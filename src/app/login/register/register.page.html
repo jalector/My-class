@@ -1,0 +1,28 @@
+<div class="background-img">
+
+</div>
+<ion-content>
+    <div class="trans-container">
+        <h1 class="biggest-text">My class<br> de León</h1>
+        <p class="app-name">Organiza tus tiempos</p>
+    
+        <div class="yuda-form">
+          <select [(ngModel)]="user.type">
+            <option value="Instructor">Instructor</option>
+            <option value="Alumno">Alumno</option>
+          </select>
+
+          <input [(ngModel)]="user.name" type="text" placeholder="Nombre">
+          <input [(ngModel)]="user.second" type="text" placeholder="Apellido">
+          <input [(ngModel)]="user.email" type="text" placeholder="Correo">
+          <input [(ngModel)]="user.password" type="text" placeholder="Contraseña">
+
+          <p style="margin-top:2em;"><strong>Nota:</strong>Si te has registrado como instructor tienes la responsibilidad de registrar a todos tus alumnos</p>
+
+          <ion-button (click)="register()" class="ion-margin-top">Iniciar sesión</ion-button>
+        </div>
+
+<pre>{{user | json}}</pre>
+        <h6 class="footer" text-center><small> Instituto Tecnológico de León </small></h6>
+      </div>
+</ion-content>

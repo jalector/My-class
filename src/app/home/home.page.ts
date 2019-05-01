@@ -10,8 +10,9 @@ import { Router, RouterEvent } from '@angular/router';
 export class HomePage {
   public selectedPath: string; 
   public pages = [
-    {title: 'Announcements', url: '/home/announcements'},
-    {title: 'Groups', url: '/home/groups'}
+    {title: 'Anuncios', url: '/home/announcements', icon: 'chatbubbles'},
+    {title: 'Groups', url: '/home/groups', icon: 'people'},
+    {title: 'Añadir grupo', url: '/home/add-group', icon: 'add-circle'}
   ]
 
   constructor(

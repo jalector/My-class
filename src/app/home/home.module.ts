@@ -21,7 +21,8 @@ import { HomePage } from './home.page';
         component: HomePage,
         children: [
           {path: 'announcements', loadChildren: '../pages/announcement/announcement.module#AnnouncementPageModule'},
-          {path: 'groups', loadChildren: '../pages/groups/groups.module#GroupsPageModule'}
+          {path: 'groups', loadChildren: '../pages/groups/groups.module#GroupsPageModule'},
+          {path: 'add-group', loadChildren: '../pages/add-group/add-group.module#AddGroupPageModule'},
         ]
       }
     ])

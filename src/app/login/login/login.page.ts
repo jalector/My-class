@@ -1,8 +1,8 @@
-import { LoginService } from './../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastController } from '@ionic/angular';
-import { SessionService } from '../services/session.service';
+import { SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +15,13 @@ export class LoginPage implements OnInit {
     email: string,
     password: string
   } = {
-    email: 'juda@mail.com',
+    email: 'juan@mail.com',
     password: 'una_facil'
   };
 
   constructor(
-    private route: Router,
-    private activedRouter: ActivatedRoute,
+    private router: Router,
+    private route: ActivatedRoute,
     private _loginService: LoginService,
     private _toastr: ToastController,
     private _sessionService: SessionService
@@ -30,12 +30,17 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * @author Juda Alector
+   * @since Mar 29, 2019
+   * @description This function start the session.
+   */
   public login(){
     console.log("credentials", this.user);
     this._loginService.login(this.user.email, this.user.password).then(
       (user: firebase.User) => {
         this._sessionService.user = user;
-        this.route.navigate(['home']);
+        this.router.navigate(['home']);
       }
     ).catch(
       async (errorMessage) => {        
@@ -46,8 +51,22 @@ export class LoginPage implements OnInit {
         });
 
         toastr.present();
+        this.router.navigate(['home']);
       }
     )
 
+  }
+
+  public register(){
+    this.router.navigate(['register']);
+  }
+
+  /**
+   * @author Juda Alector
+   * @since Mar 29, 2019
+   * @description This function send the user to register view.
+   */
+  public signup(){
+    this.route
   }
 }

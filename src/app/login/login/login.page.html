@@ -6,13 +6,13 @@
     <p class="app-name">My Class</p>
     <p>Organiza tus tiempo</p>
 
-    <div class="form-login">
+    <div class="yuda-form">
       <input type="text" [(ngModel)]="user.email" placeholder="Correo">
       <input type="password" [(ngModel)]="user.password" placeholder="Contraseña">
       <div class="buttons">
         <div class="button">
           <ion-button (click)="login()">Iniciar sesión</ion-button>
-          <ion-button>Registrarse</ion-button>
+          <ion-button (click)="register()">Registrarse</ion-button>
         </div>
       </div>
     </div>

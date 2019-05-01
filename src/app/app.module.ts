@@ -22,7 +22,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { from } from 'rxjs';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   entryComponents: [],
   imports: [
     BrowserModule, 
